@@ -1,0 +1,62 @@
+.hover
+	&__container
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 252px
+		height: 252px
+		position: relative
+		margin: 0 auto
+	&__button
+		position: relative
+		width: 200px
+		height: 200px
+		border-radius: 50%
+		overflow: hidden
+		&:hover
+			.two
+				transform: translate(0px, 55px)
+			.three
+				transform: translate(0px, -55px)
+			.four
+				transform: translate(55px, 0px)
+			.five
+				transform: translate(-55px, 0px)
+	&__circle
+		width: 200px
+		height: 200px
+		position: absolute
+		border-radius: 50%
+
+.one
+	background-color: rgba(96, 133, 255, 0.45)
+	font-size: 20px
+	letter-spacing: 1.5px
+	display: flex
+	justify-content: center
+	align-items: center
+	color: white
+	font-weight: bold
+	transition: 1s ease-in
+	&:before
+		content: "hover me"
+
+.two
+	background-color: green
+	transition: 0.8s ease-out
+	opacity: 0.6
+
+.three
+	background-color: red
+	transition: 0.8s ease-in-out
+	opacity: 0.6
+
+.four
+	background-color: pink
+	transition: 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+	opacity: 0.6
+
+.five
+	background-color: blue
+	transition: 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+	opacity: 0.6

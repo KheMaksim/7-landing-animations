@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  background-color: #afafaf;
+  padding: 20px;
+  margin: 20px;
+}
+
+.first__link-link {
+  color: red;
+}
+.first__link {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  border: 2px solid red;
+  padding: 19px 40px;
+  position: relative;
+  left: 40%;
+  cursor: pointer;
+}
+.first__link::before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background-color: #000;
+  position: absolute;
+  margin-top: 6px;
+  right: -35px;
+  transition: all 0.7s ease;
+}
+.first__link:hover::before {
+  width: 150%;
+}
+.first__link:hover .first__top {
+  top: -5px;
+  transition-delay: 0.15s;
+}
+.first__link:hover .first__bottom {
+  bottom: -5px;
+  transition-delay: 0.15s;
+}
+.first__top {
+  height: 6px;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  transition: all 0.3s ease;
+  transition-delay: 0.3s;
+}
+.first__bottom {
+  height: 6px;
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+  transition: all 0.3s ease;
+  transition-delay: 0.3s;
+}
+.first__top-paragraph, .first__bot-paragraph {
+  text-transform: uppercase;
+}
+.first__bot-paragraph {
+  top: -6px;
+  position: absolute;
+  left: 0;
+}
+
+.section__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  max-width: 200px;
+  width: 100%;
+  min-height: 300px;
+  border-radius: 15px;
+  outline: 1px solid rgba(255, 255, 0, 0.7);
+  outline-offset: -10px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  z-index: 0;
+}
+.card:hover .card__image {
+  transform: scale(1.25);
+}
+.card__image {
+  position: absolute;
+  inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 1s;
+  z-index: -2;
+}
+.card__title {
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 20px;
+  bottom: 50%;
+  padding-bottom: 15px;
+  z-index: -1;
+}
+.card__subtitle {
+  font-size: 14px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: -1;
+}
+
+.item {
+  max-width: 200px;
+  width: 100%;
+  min-height: 300px;
+  border-radius: 15px;
+  outline: 1px solid rgba(255, 255, 0, 0.7);
+  outline-offset: -10px;
+  position: relative;
+  color: white;
+  transition: all 1s ease-out;
+}
+.item:hover {
+  transform: rotateZ(-345deg) rotateY(-180deg) scale(-1, 1);
+}
+.item:hover .item__subtitle {
+  transform: scale(1);
+  transition-delay: 0.7s;
+}
+.item:hover .item__title {
+  display: none;
+}
+.item__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.item__title {
+  position: absolute;
+  left: 20px;
+  bottom: 50%;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.item__subtitle {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+}
+
+.box {
+  max-width: 200px;
+  width: 100%;
+  min-height: 300px;
+  border-radius: 15px;
+  outline: 1px solid rgba(255, 255, 0, 0.7);
+  outline-offset: -10px;
+  position: relative;
+  color: white;
+  transition: all 1s ease-out;
+}
+.box:hover {
+  background-color: gray;
+  overflow: visible;
+}
+.box:hover .box__image {
+  transform: rotateZ(-90deg);
+  transform-origin: 0 0;
+}
+.box:hover .box__subtitle {
+  transform: scale(1);
+  transition-delay: 0.7s;
+}
+.box:hover .box__title {
+  transform: translatey(-110px);
+  transition-delay: 0.3s;
+}
+.box__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  transition: all 0.7s ease-out;
+}
+.box__title {
+  position: absolute;
+  left: 20px;
+  bottom: 50%;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.7s ease-out;
+}
+.box__subtitle {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+}
+
+.last {
+  max-width: 200px;
+  width: 100%;
+  min-height: 300px;
+  border-radius: 15px;
+  outline: 1px solid rgba(255, 255, 0, 0.7);
+  outline-offset: -10px;
+  position: relative;
+  color: white;
+  transition: all 1s ease-out;
+}
+.last:hover {
+  background-color: gray;
+  overflow: visible;
+}
+.last:hover .last__image {
+  transform: rotatey(-90deg) translate(50%, -50%) rotateZ(60deg);
+}
+.last:hover .last__subtitle {
+  transform: scale(1);
+  transition-delay: 0.7s;
+}
+.last:hover .last__title {
+  transform: translatey(-110px);
+  transition-delay: 0.3s;
+}
+.last__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  transition: all 0.7s ease-out;
+}
+.last__title {
+  position: absolute;
+  left: 20px;
+  bottom: 50%;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.7s ease-out;
+}
+.last__subtitle {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+}
+
+.hover__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 252px;
+  height: 252px;
+  position: relative;
+  margin: 0 auto;
+}
+.hover__button {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.hover__button:hover .two {
+  transform: translate(0px, 55px);
+}
+.hover__button:hover .three {
+  transform: translate(0px, -55px);
+}
+.hover__button:hover .four {
+  transform: translate(55px, 0px);
+}
+.hover__button:hover .five {
+  transform: translate(-55px, 0px);
+}
+.hover__circle {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.one {
+  background-color: rgba(96, 133, 255, 0.45);
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  transition: 1s ease-in;
+}
+.one:before {
+  content: "hover me";
+}
+
+.two {
+  background-color: green;
+  transition: 0.8s ease-out;
+  opacity: 0.6;
+}
+
+.three {
+  background-color: red;
+  transition: 0.8s ease-in-out;
+  opacity: 0.6;
+}
+
+.four {
+  background-color: pink;
+  transition: 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  opacity: 0.6;
+}
+
+.five {
+  background-color: blue;
+  transition: 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  opacity: 0.6;
+}/*# sourceMappingURL=main.css.map */

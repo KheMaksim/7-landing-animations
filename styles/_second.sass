@@ -1,0 +1,39 @@
+.section__container
+	display: flex
+	justify-content: space-between
+
+.card
+	max-width: 200px
+	width: 100%
+	min-height: 300px
+	border-radius: 15px
+	outline: 1px solid rgba(255, 255, 0, 0.7)
+	outline-offset: -10px
+	position: relative
+	overflow: hidden
+	color: white
+	z-index: 0
+	&:hover
+		.card__image
+			transform: scale(1.25)
+	&__image
+		position: absolute
+		inset: 0
+		object-fit: cover
+		transition: transform 1s
+		z-index: -2
+	&__title
+		font-size: 20px
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+		position: absolute
+		left: 20px
+		bottom: 50%
+		padding-bottom: 15px
+		z-index: -1
+	&__subtitle
+		font-size: 14px
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+		position: absolute
+		left: 20px
+		bottom: 20px
+		z-index: -1

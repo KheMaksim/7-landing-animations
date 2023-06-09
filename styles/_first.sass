@@ -1,0 +1,51 @@
+.first
+	&__link-link
+		color: red
+	&__link
+		display: inline-block
+		font-size: 11px
+		font-weight: bold
+		letter-spacing: 5px
+		border: 2px solid red
+		padding: 19px 40px
+		position: relative
+		left: 40%
+		cursor: pointer
+		&::before
+			content: ""
+			height: 1px
+			width: 60px
+			background-color: #000
+			position: absolute
+			margin-top: 6px
+			right: -35px
+			transition: all 0.7s ease
+		&:hover
+			&::before
+				width: 150%
+			.first__top
+				top: -5px
+				transition-delay: 0.15s
+			.first__bottom
+				bottom: -5px
+				transition-delay: 0.15s
+	&__top
+		height: 6px
+		overflow: hidden
+		position: relative
+		top: 0
+		transition: all 0.3s ease
+		transition-delay: 0.3s
+	&__bottom
+		height: 6px
+		overflow: hidden
+		position: relative
+		bottom: 0
+		transition: all 0.3s ease
+		transition-delay: 0.3s
+	&__top-paragraph,&__bot-paragraph
+		text-transform: uppercase
+	&__bot-paragraph
+		top: -6px
+		position: absolute
+		left: 0
